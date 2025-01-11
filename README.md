@@ -1,5 +1,36 @@
 # Planka
+
 #### Elegant open source project tracking.
+
+<!-- 지금까지 수정사항 -->
+
+-1. npm install
+-2. npm run setup:db
+-3. npm run start
+
+# 데이터베이스 초기화
+
+npm run server:db:init
+
+# 데이터베이스 마이그레이션
+
+npm run server:db:migrate
+
+# 데이터베이스 시드 데이터 추가
+
+npm run server:db:seed
+
+# 명령어 합쳐서 하나로 만듦
+
+npm run setup:db
+
+수정할 DB 추가 시
+
+cd server/db
+npx knex migrate:make add_installation_date_to_card
+npm run setup:db
+
+node version v22.13.0
 
 ![David (path)](https://img.shields.io/github/package-json/v/plankanban/planka) ![Docker Pulls](https://img.shields.io/badge/docker_pulls-5M%2B-%23066da5) ![GitHub](https://img.shields.io/github/license/plankanban/planka)
 

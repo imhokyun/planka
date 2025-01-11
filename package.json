@@ -29,7 +29,8 @@
     "server:start:prod": "npm run start:prod --prefix server",
     "server:test": "npm test --prefix server",
     "start": "concurrently -n server,client \"npm run server:start\" \"npm run client:start\"",
-    "test": "npm run server:test && npm run client:test"
+    "test": "npm run server:test && npm run client:test",
+    "setup:db": "npm run server:db:init && npm run server:db:migrate && npm run server:db:seed"
   },
   "lint-staged": {
     "client/src/**/*.{js,jsx}": [
@@ -60,7 +61,8 @@
     "concurrently": "^8.2.2",
     "genversion": "^3.2.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10"
+    "lint-staged": "^15.2.10",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "eslint": "^8.57.1",
